@@ -54,9 +54,16 @@ public class PembayaranBeraksi {
                     default -> throw new IllegalArgumentException("Pilihan tidak valid");
                 }
 
-                System.out.print("Masukkan Jumlah Pemakaian (KWH) ke "  + (i+1)+": ");
-                int jumlahPemakaian = scanner.nextInt();
-                scanner.nextLine(); 
+                  int jumlahPemakaian;
+                while (true) {
+                    try {
+                        System.out.print("Masukkan Jumlah Pemakaian (KWH) ke " + (i + 1) + ": ");
+                        jumlahPemakaian = Integer.parseInt(scanner.nextLine());
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Jumlah Pemakaian harus berupa angka. Silakan coba lagi.");
+                    }
+                } 
 
                 // Membuat objek pembayaran listrik
                 pengguna[i] = new PembayaranDetail(namaPelanggan, IDPEL, jenisPelanggan, jumlahPemakaian);
@@ -66,10 +73,15 @@ public class PembayaranBeraksi {
                 System.out.println("\n=== Struk Tagihan Listrik ===");
                 System.out.println(data.infoTagihan());
             }
-
-        } catch (IllegalArgumentException e) {
-            System.out.println("Kesalahan: " + e.getMessage());
-        } catch (Exception e) {
+           
+        } 
+        catch(NumberFormatException e) {
+             System.out.println("Kesalahan Format Nomor" + e.getMessage());
+             }
+        catch(StringIndexOutOfBoundsException e) {
+            System.out.println("Kesalahan Format " + e.getMessage());
+        }
+        catch (Exception e) {
             System.out.println("Kesalahan Umum: " + e.getMessage());
         }
     }
