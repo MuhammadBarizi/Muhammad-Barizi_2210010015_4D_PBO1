@@ -34,7 +34,7 @@ public class MahasiswaBeraksi {
 pengguna[i] = new PembayaranDetail(namaPelanggan, IDPEL, jenisPelanggan, jumlahPemakaian);
 ```
 
-3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `nama` dan `npm` adalah contoh atribut.
+3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `namaPelanggan` ,`IDPEL`,`JenisPelanggan`,` dan `,`jumlahPemakaian` adalah contoh atribut.
 
 ```bash
 String namaPelanggan;
@@ -59,7 +59,7 @@ public PembayaranDetail(String namaPelanggan, String IDPEL, String jenisPelangga
     }
 ```
 
-5. **Mutator** atau setter digunakan untuk mengubah nilai dari suatu atribut. Pada kode ini, `setNama` dan `setNpm` adalah contoh method mutator.
+5. **Mutator** atau setter digunakan untuk mengubah nilai dari suatu atribut. Pada kode ini, `setNamaPelanggan`, `setIDPEL` `setJenisPelanggan` `setJumlahPemakaian` dan `setNpm` adalah contoh method mutator.
 
 ```bash
     public void setNamaPelanggan(String namaPelanggan) {
@@ -79,7 +79,7 @@ public PembayaranDetail(String namaPelanggan, String IDPEL, String jenisPelangga
     }
 ```
 
-6. **Accessor** atau getter digunakan untuk mengambil nilai dari suatu atribut. Pada kode ini, `getNama`, `getNpm`, `getTahunMasuk`, `getFakultas`, `getProdi`, dan `getNoRegistrasi` adalah contoh method accessor.
+6. **Accessor** atau getter digunakan untuk mengambil nilai dari suatu atribut. Pada kode ini, `getNamaPelanggan`, `getIDPEL`, `getJenisPelanggan`, `getJumlahPemakaian`, `getHitungTagihan` adalah contoh method accessor.
 
 ```bash
     public String getNamaPelanggan() {
@@ -98,9 +98,12 @@ public PembayaranDetail(String namaPelanggan, String IDPEL, String jenisPelangga
         return jumlahPemakaian;
     }
 
+    publinic int getHitungTagihan() {
+        }
+
 ```
 
-7. **Encapsulation** adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut `nama` dan `npm` dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
+7. **Encapsulation** adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut `namaPelanggan` ,`IDPEL`,`JenisPelanggan`,` dan `,`jumlahPemakaian` dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
 
 ```bash
     private String namaPelanggan;
@@ -109,7 +112,7 @@ public PembayaranDetail(String namaPelanggan, String IDPEL, String jenisPelangga
     private int jumlahPemakaian;
 ```
 
-8. **Inheritance** adalah konsep di mana sebuah class bisa mewarisi property dan method dari class lain. Pada kode ini, `MahasiswaDetail` mewarisi `Mahasiswa` dengan sintaks `extends`.
+8. **Inheritance** adalah konsep di mana sebuah class bisa mewarisi property dan method dari class lain. Pada kode ini, `PembayaranDetail` mewarisi `PembayaranDetail` dengan sintaks `extends`.
 
 ```bash
 public class PembayaranDetail extends PembayaranListrik {
@@ -117,7 +120,7 @@ public class PembayaranDetail extends PembayaranListrik {
 }
 ```
 
-9. **Polymorphism** adalah konsep di mana sebuah nama dapat digunakan untuk merujuk ke beberapa tipe atau bentuk objek berbeda. Ini memungkinkan metode-metode dengan nama yang sama untuk berperilaku berbeda tergantung pada tipe objek yang mereka manipulasi, polymorphism bisa berbentuk Overloading ataupun Overriding. Pada kode ini, method `displayInfo(String)` di `Mahasiswa` merupakan overloading method `displayInfo` dan `displayInfo` di `MahasiswaDetail` merupakan override dari method `displayInfo` di `Mahasiswa`.
+9. **Polymorphism** adalah konsep di mana sebuah nama dapat digunakan untuk merujuk ke beberapa tipe atau bentuk objek berbeda. Ini memungkinkan metode-metode dengan nama yang sama untuk berperilaku berbeda tergantung pada tipe objek yang mereka manipulasi, polymorphism bisa berbentuk Overloading ataupun Overriding. Pada kode ini, method `infoTagihan(String)` di `PembayaranListrik` merupakan overloading method `infoTagihan` dan `infoTagihan` di `PembyaranDetail` merupakan override dari method `infoTagihan` di `PembayaranListrik`.
 
 ```bash
 public String infoTagihan() {
@@ -136,7 +139,7 @@ public String infoTagihan() {
 
 ```
 
-10. **Seleksi** adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi `if else` dalam method `getFakultas` dan seleksi `switch` dalam method `getProdi`.
+10. **Seleksi** adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi `switch` dalam method `getHitungTagihan` dan seleksi `switch` dalam method  di PembayaranDetail`getJenisPelanggan` di PembayaranListrik. 
 
 ```bash
  public int hitungTagihan() {
